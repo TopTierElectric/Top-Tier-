@@ -1,0 +1,143 @@
+:root {
+  --black: #111111;
+  --gold: #FFD700;
+  --primary-font: 'Roboto', Arial, sans-serif;
+  --radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  background: #fff;
+  color: #1f1f1f;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background: var(--black);
+  color: var(--gold);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav a {
+  color: var(--gold);
+  font-weight: 600;
+  margin: 0 8px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+nav a.active,
+nav a:hover {
+  background: rgba(255, 215, 0, 0.1);
+  text-decoration: none;
+}
+
+.button-primary {
+  background: var(--gold);
+  color: var(--black);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  display: inline-block;
+  transition: filter .2s;
+}
+
+.button-primary:hover {
+  filter: brightness(1.05);
+}
+
+.hero {
+  background: var(--black);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.trust-badges img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+footer {
+  background: #1f1f1f;
+  color: var(--gold);
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: var(--gold);
+}
+
+.card {
+  background: #fafafa;
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 200;
+}
+
+.skip-link:focus {
+  left: 10px;
+}
+
+.service-areas {
+  font-size: 0.75rem;
+  color: #ccc;
+  margin-top: 6px;
+}
+
+@media (min-width: 768px) {
+  .grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 1rem;
+  }
+}
